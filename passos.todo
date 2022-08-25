@@ -1,0 +1,2 @@
+1 passo
+☐ Criar uma rota get para '/pizzas/:id' direcionando a req para o controller PizzasController.show

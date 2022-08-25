@@ -17,15 +17,15 @@
             </form>
 
         <main>
-            <% for(let p of cardapio) { %>
-            <article>
-                <img src="/img/pepperoni.jpg" alt="Pepperoni">
-                <a href="/pizzas/2">Ver Mais</a>
-                <button>+Add</button>
-                <div> <%= p.nome %></div>
-                <span>R$48.50</span>
-            </article>
-            <% } %>
+            <% for(let p of pizzas){ %>
+        <article>
+            <img src="<%= p.img %>" alt="<%= p.nome%>">
+            <a href="/pizzas/<%= p.id %>">Ver Mais</a>
+            <button>+Add</button>
+            <div><%= p.nome %></div>
+            <span>R$ <%= p.preco %></span>
+        </article>
+        <% } %>
         </main>
 
 	</body>
