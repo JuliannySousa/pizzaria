@@ -1,4 +1,5 @@
 // Importando o array de pizzas
+const { name, resolveInclude } = require('ejs');
 const pizzas = require('../database/pizzas.json');
 
 // Criando e exportando o objeto literal que conterá todas as funções (controllers)
@@ -15,12 +16,14 @@ module.exports = {
         res.render("pizza.ejs", {pizza})
         
 
-
-
     },
 
-    search: (req, res) => {
+    search:(req,res) =>{
+        let search = req.query.q
+        let pizzaSearch = pizzas.filter(p => p.nome.toLocaleLowerCase().includes(search))
+        res.render('index.ejs', {pizzas:pizzaSearch})
 
+            
     },
 
 }

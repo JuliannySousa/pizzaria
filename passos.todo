@@ -1,2 +1,17 @@
 1 passo
-☐ Criar uma rota get para '/pizzas/:id' direcionando a req para o controller PizzasController.show
+✔ Criar uma rota get para '/pizzas/:id' direcionando a req para o controller PizzasController.show @done(22-08-25 11:01)
+
+
+
+☐ A função show deve:
+    
+        - Levantar o id que veio no parâmetro de rota (req.params.id)
+
+        - Encontrar no array de pizzas a pizza que tem o id desejado (pizzas.find)
+
+        - Retornar a view pizza.ejs, a pizza encontrada no passo anterior para essa view
+
+        A função search do PizzasController deve:
+                - Levantar o trecho que está sendo buscado (req.query.q)
+                - Filtrar as pizzas para obter somente as pizzas com esse trecho
+                - retornar a view index.ejs, passando para ela somente as pizzas filtradas
