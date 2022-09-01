@@ -20,7 +20,7 @@ module.exports = {
 
     search:(req,res) =>{
         let search = req.query.q
-        let pizzaSearch = pizzas.filter(p => p.nome.toLocaleLowerCase().includes(search))
+        let pizzaSearch = pizzas.filter(p => p.nome.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
         res.render('index.ejs', {pizzas:pizzaSearch})
 
             
